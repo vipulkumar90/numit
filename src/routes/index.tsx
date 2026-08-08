@@ -1,35 +1,77 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { LanguageToggle } from "@/components/common/language-toggle";
+import { ThemeToggle } from "@/components/common/theme-toggle";
+import { Container, Section, Stack } from "@/components/layout/container";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Text } from "@/components/ui/text";
+import { useI18n } from "@/i18n";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Party Game — Foundation Ready" },
+      { title: "Party Game — Play together with friends" },
       {
         name: "description",
         content:
-          "Foundation for a mobile-first multiplayer party game: styling, routing, folder structure and theme tokens are in place.",
+          "A mobile-first multiplayer party game. Create a room, invite friends, and play together in English or Japanese.",
       },
-      { property: "og:title", content: "Party Game — Foundation Ready" },
+      { property: "og:title", content: "Party Game — Play together with friends" },
       {
         property: "og:description",
         content:
-          "Foundation for a mobile-first multiplayer party game: styling, routing, folder structure and theme tokens are in place.",
+          "A mobile-first multiplayer party game. Create a room, invite friends, and play together in English or Japanese.",
       },
     ],
   }),
-  component: Index,
+  component: HomePage,
 });
 
-function Index() {
+function HomePage() {
+  const { t } = useI18n();
+
   return (
-    <main className="flex min-h-screen items-center justify-center bg-background px-6 py-16">
-      <div className="w-full max-w-md rounded-3xl bg-card p-8 text-center shadow-[var(--shadow-float)]">
-        <h1 className="text-3xl text-card-foreground">Foundation ready</h1>
-        <p className="mt-3 text-sm text-muted-foreground">
-          Styling, routing, folder structure and theme tokens are configured. Pages and UI
-          components come next.
-        </p>
-      </div>
+    <main className="min-h-screen bg-background">
+      <header className="flex items-center justify-between px-4 py-4 sm:px-6">
+        <span className="font-display text-lg font-black text-primary">{t("app.name")}</span>
+        <div className="flex items-center gap-1">
+          <LanguageToggle />
+          <ThemeToggle />
+        </div>
+      </header>
+
+      <Section>
+        <Container size="sm">
+          <Card variant="floating">
+            <CardHeader>
+              <CardTitle>
+                <Text as="h1" variant="h1" align="center">
+                  {t("home.title")}
+                </Text>
+              </CardTitle>
+              <CardDescription>
+                <Text variant="caption" align="center">
+                  {t("home.subtitle")}
+                </Text>
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Stack gap="md">
+                <Button block disabled>
+                  {t("home.cta.create")}
+                </Button>
+                <Button variant="outline" block disabled>
+                  {t("home.cta.join")}
+                </Button>
+                <Text variant="small" align="center">
+                  {t("home.comingSoon")}
+                </Text>
+              </Stack>
+            </CardContent>
+          </Card>
+        </Container>
+      </Section>
     </main>
   );
 }
