@@ -6,27 +6,33 @@ import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer select-none transition-[color,background-color,box-shadow,transform] duration-150 ease-out active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-display font-extrabold tracking-tight cursor-pointer select-none transition-[color,background-color,box-shadow,transform] duration-150 ease-out hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/40 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         primary:
-          "bg-primary text-primary-foreground shadow-[var(--shadow-soft)] hover:bg-primary/90 hover:shadow-[var(--shadow-float)]",
+          "bg-gradient-primary text-primary-foreground shadow-[var(--shadow-float)] hover:shadow-[var(--shadow-glow)]",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-[var(--shadow-soft)] hover:bg-secondary/85",
-        accent: "bg-accent text-accent-foreground shadow-[var(--shadow-soft)] hover:bg-accent/85",
+          "bg-gradient-secondary text-secondary-foreground shadow-[var(--shadow-float)] hover:shadow-[var(--shadow-glow)]",
+        accent:
+          "bg-gradient-accent text-accent-foreground shadow-[var(--shadow-float)] hover:shadow-[var(--shadow-glow)]",
+        cool: "bg-gradient-cool text-primary-foreground shadow-[var(--shadow-float)] hover:shadow-[var(--shadow-glow)]",
+        success:
+          "bg-success text-success-foreground shadow-[var(--shadow-float)] hover:brightness-105",
         outline:
-          "border-2 border-border bg-card text-card-foreground hover:bg-muted hover:border-primary/40",
+          "border-2 border-primary/25 bg-card text-card-foreground shadow-[var(--shadow-soft)] hover:border-primary/50 hover:bg-primary/5",
         ghost: "text-foreground hover:bg-muted",
         danger:
-          "bg-destructive text-destructive-foreground shadow-[var(--shadow-soft)] hover:bg-destructive/90",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-destructive text-destructive-foreground shadow-[var(--shadow-float)] hover:brightness-105",
+        link: "text-primary underline-offset-4 hover:underline hover:translate-y-0",
       },
       size: {
         sm: "h-9 px-4 text-sm",
-        md: "h-11 px-6 text-sm",
-        lg: "h-14 px-8 text-base",
-        icon: "h-11 w-11",
+        md: "h-12 px-6 text-base",
+        lg: "h-14 px-8 text-lg",
+        xl: "h-16 px-10 text-xl",
+        icon: "h-12 w-12",
+        "icon-lg": "h-14 w-14",
       },
       block: {
         true: "w-full",

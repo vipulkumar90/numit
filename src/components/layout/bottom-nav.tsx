@@ -9,15 +9,15 @@ export function BottomNav() {
   return (
     <nav
       aria-label={t("nav.menu")}
-      className="fixed inset-x-0 bottom-0 z-30 border-t border-border/60 bg-background/95 backdrop-blur sm:hidden"
+      className="fixed inset-x-3 bottom-3 z-30 rounded-3xl border-2 border-card bg-card/95 shadow-[var(--shadow-float)] backdrop-blur-xl sm:hidden"
     >
-      <ul className="mx-auto flex max-w-md items-stretch justify-between px-2 pb-[env(safe-area-inset-bottom)]">
+      <ul className="mx-auto flex max-w-md items-stretch justify-between px-2 py-1 pb-[max(0.25rem,env(safe-area-inset-bottom))]">
         {primaryNavItems.map(({ to, labelKey, icon: Icon }) => (
           <li key={to} className="min-w-0 flex-1">
             <Link
               to={to}
               activeOptions={{ exact: to === "/" }}
-              className="flex flex-col items-center gap-1 rounded-2xl px-1 py-2 text-[11px] font-semibold text-muted-foreground transition-colors duration-150 data-[status=active]:text-primary"
+              className="flex flex-col items-center gap-1 rounded-2xl px-1 py-2 font-display text-[11px] font-bold text-muted-foreground transition-colors duration-150 data-[status=active]:bg-primary/10 data-[status=active]:text-primary"
             >
               <Icon aria-hidden="true" className="size-5" />
               <span className="w-full truncate text-center">{t(labelKey)}</span>
