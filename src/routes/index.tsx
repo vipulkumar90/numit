@@ -50,7 +50,7 @@ function HomePage() {
           <Text as="h1" variant="h1" className="text-5xl text-gradient-primary sm:text-6xl">
             {t("app.name")}
           </Text>
-          <Pill variant="primary" size="lg" className="animate-float">
+          <Pill variant="primary" size="lg" className="h-auto max-w-full whitespace-normal py-2 text-center animate-float">
             {t("home.subtitle")}
           </Pill>
 

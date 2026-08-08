@@ -8,15 +8,15 @@ import { cn } from "@/lib/utils";
  * Used for number choices, results and decorative card fans.
  */
 const tileVariants = cva(
-  "relative grid place-items-center rounded-2xl border-4 border-card bg-card font-display font-black tabular-nums shadow-[var(--shadow-float)] transition-transform duration-200 select-none",
+  "relative grid place-items-center rounded-xl border-4 border-card bg-card font-display font-black tabular-nums shadow-[var(--shadow-float)] transition-transform duration-200 select-none",
   {
     variants: {
       tone: {
-        purple: "text-primary ring-4 ring-primary/25",
-        pink: "text-secondary ring-4 ring-secondary/25",
-        blue: "text-info ring-4 ring-info/25",
-        teal: "text-teal ring-4 ring-teal/30",
-        yellow: "text-accent-foreground ring-4 ring-accent/50",
+        purple: "text-primary ring-2 ring-primary/25",
+        pink: "text-secondary ring-2 ring-secondary/25",
+        blue: "text-info ring-2 ring-info/25",
+        teal: "text-teal ring-2 ring-teal/30",
+        yellow: "text-accent-foreground ring-2 ring-accent/50",
       },
       size: {
         sm: "h-14 w-11 text-xl",
