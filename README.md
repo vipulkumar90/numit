@@ -1,24 +1,35 @@
-# Vite Supa Star
+# Numit
 
-Initialize a React + TypeScript + Vite + Tailwind + Supabase app.
+A modern online multiplayer party game focused on communication, teamwork, and creative thinking.
 
-This project was built with [Lovable](https://lovable.dev).
+This project is currently under active development.
 
-## Build with Lovable
+## Goals
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/31964f9a-28ac-4809-9ce4-58eeda98fbe3).
+- Build a polished multiplayer web application
+- Learn modern full-stack development using AI-assisted workflows
+- Explore real-time multiplayer architecture
+- Practice UI/UX and game design
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Supabase
+- Lovable
+
+## Project Status
+
+🚧 Early development
+
+Features and gameplay may change as the project evolves.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+More documentation will be added as the project progresses.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+## License
+
+This project is licensed under the MIT License.
