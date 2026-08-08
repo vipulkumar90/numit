@@ -10,11 +10,12 @@ import {
   Info,
   type LucideIcon,
 } from "lucide-react";
+import type { LinkProps } from "@tanstack/react-router";
 
 import type { TranslationKey } from "@/i18n";
 
 export interface NavItem {
-  to: string;
+  to: NonNullable<LinkProps["to"]>;
   labelKey: TranslationKey;
   icon: LucideIcon;
   /** Shown in the mobile bottom navigation. */
